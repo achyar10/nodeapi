@@ -1,18 +1,37 @@
 {
   "name": "nodeapi",
   "version": "1.0.0",
-  "description": "Learn API from node js",
-  "main": "app.js",
+  "description": "a todo app with men stack for learning purpose",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "start": "nodemon --exec npm run babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
   },
   "author": "Achyar Anshorie",
   "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.18.3",
     "express": "^4.17.1",
-    "joi": "^14.3.1",
-    "mongoose": "^5.5.12",
+    "mongoose": "^5.5.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "nodemon": "^1.19.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }
