@@ -5,7 +5,7 @@ import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 
 // import route
-import route from './route'
+import route from './app/routes/Routes'
 
 const app = express()
 
@@ -29,7 +29,7 @@ mongoose.connect('mongodb://localhost/todo', {
 app.use('/api', route)
 
 app.get('/', (req, res) => {
-  return res.end('API Working')
+  return res.json({"message": "Nothing"})
 })
 
 // jika route tidak ditemukan
